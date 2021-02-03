@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Questão</title>
+    <link rel="stylesheet" href="./styles.css">
+</head>
+
+<body>
+
+    <div id="interface">
+        <h1 id=>Verifique se o seu CPF é válido</h1>
+        <input onkeypress="return isNumberKey(event)" id="cpf" placeholder="Digite aqui o seu CPF"></input>
+        <br>
+        <button id = "botao">Validar</button>
+        <p id="mensagem"></p>
+
+    </div>
+
+    <script src="cpf.js"></script>
+<!--  Restringe entrada à números -->
+    <script>
+        function isNumberKey(evt){
+            var charCode = (evt.which) ? evt.which : evt.keyCode
+            if (charCode > 31 && (charCode < 48 || charCode > 57))
+                return false;
+            return true;
+        }
+    </script>
+
+</body>
+</html>
